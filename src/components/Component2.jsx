@@ -4,8 +4,8 @@ const Component2 = (props) => {
   }
 
   return (
-    <div className="text-center">
-      <input type="text" value={props.data} onChange={onChange} />
+    <div className="flex pt-10 border-2 border-cyan-300 h-28 mt-10 justify-center">
+      <input className="flex content-center w-4/6 h-2/5 text-center" type="text" value={props.data} onChange={onChange} />
     </div>
   );
 };

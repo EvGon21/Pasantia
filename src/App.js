@@ -1,15 +1,23 @@
-//import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 import Component1 from "./components/Component1";
+import Component4 from "./components/Component4";
 
 function App() {
-  return (
-    <div className="App flex flex-col h-screen">
-      <Component1 className="flex">
-        <div className="">
-          <h2>Titulo</h2>
+  const [data, setdata] = useState("");
+  
+  return (    
+    <div className={`App flex-col h-screen flex items-center content-center ${data ? 'bg-slate-300' : 'bg-blue-700'}`}>
+      <Component1 data={data} setdata={setdata} className="flex">        
+        <div className="flex-col justify-center">
+          <div className="flex justify-center text">
+          </div>
+          <div className="flex justify-center text-center">
+            <h2 className="text-center text-sky-50 font-bold">TITULO</h2>            
+          </div>          
         </div>
-      </Component1>
+      </Component1>    
+      <Component4 data={data} setdata={setdata} />
 
       {/* <div className="w-[300px] flex flex-col border-2 border-rose-500  items-center p-5">
         <div className="h-20 w-40 border-2 border-pink-500"></div>
